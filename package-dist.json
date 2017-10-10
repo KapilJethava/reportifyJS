@@ -1,8 +1,8 @@
 {
-	"name": "angular-npm-module-seed",
+	"name": "reportifyjs",
 	"version": "1.0.0",
-	"description": "Wot!",
-	"main": "bundles/npm-module-seed.umd.min.js",
+	"description": "Generate report from your data",
+	"main": "bundles/reportify.js",
 	"module": "index.js",
 	"typings": "index.d.ts",
 	"keywords": [
@@ -11,17 +11,17 @@
 		"angular 2"
 	],
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Kapil Jethava",
+		"email": "jethava.kapil@gmail.com"
 	},
-	"license": "",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/KapilJethava/reportifyjs.git"
 	},
-	"homepage": "",
+	"homepage": "https://github.com/KapilJethava/reportifyjs",
 	"bugs": {
-		"url": ""
+		"url": "https://github.com/KapilJethava/reportifyjs/issues"
 	},
 	"peerDependencies": {
 		"@angular/core": "^2.4.0",
