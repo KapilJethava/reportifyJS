@@ -1,3 +1,3 @@
-export { SeedModule } from './seed.module';
-export { SeedService } from './services/seed.service';
-export { SeedComponent } from './components/seed.component';
+export { ReportModule } from './report.module';
+//export { SeedService } from './services/seed.service';
+export { ReportComponent } from './components/report/report.component';

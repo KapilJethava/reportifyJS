@@ -28,10 +28,15 @@
 		"lib": [
 			"es2015",
 			"dom"
+		],
+		"emitDecoratorMetadata": true,
+		"typeRoots": [
+			"node_modules/@types"
 		]
 	},
 	"files": [
-		"./src/index.ts"
+		"./src/index.ts",
+		"./src/report.module.ts"
 	],
 	"angularCompilerOptions": {
 		"strictMetadataEmit": true,

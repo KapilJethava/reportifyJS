@@ -12,7 +12,7 @@
     "package": "rollup -c",
     "minify": "./node_modules/uglify-js/bin/uglifyjs dist/bundles/reportify.js --screw-ie8 --compress --mangle --comments --output dist/bundles/reportify.min.js",
     "copy": "cpx './package-dist.json' dist && renamer --find 'package-dist.json' --replace 'package.json' ./dist/*",
-    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy && rimraf .tmp",
+    "build": "(npm run clean && npm run transpile && npm run package && npm run minify && npm run copy && rimraf .tmp) || rimraf .tmp",
     "test": "mocha-webpack",
     "test:watch": "mocha-webpack --watch"
   },
@@ -29,24 +29,25 @@
     "@angular/compiler": "^2.4.4",
     "@angular/compiler-cli": "^2.4.4",
     "@types/chai": "^4.0.4",
+    "@types/lodash": "4.14.50",
     "@types/mocha": "^2.2.43",
-    "@types/sinon": "^2.3.5",
     "chai": "^4.1.2",
     "cpx": "^1.5.0",
     "mocha": "^4.0.0",
     "mocha-webpack": "^0.7.0",
     "renamer": "^0.6.1",
     "rimraf": "^2.5.4",
-    "rollup": "^0.41.4",
+    "rollup": "^0.41.6",
     "sinon": "^4.0.1",
     "typescript": "~2.0.0",
     "uglify-js": "^2.7.5",
-    "webpack": "^3.6.0",
+    "webpack": "^3.8.1",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "@angular/common": "^2.4.4",
     "@angular/core": "^2.4.4",
+    "lodash": "4.14",
     "rxjs": "^5.0.3",
     "zone.js": "^0.7.6"
   }

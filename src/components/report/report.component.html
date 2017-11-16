@@ -1,0 +1,44 @@
+<div class="flex flex-row" *ngIf="!isTabularReport">
+	<div class="filter-container flex flex-colm">
+		<div class="filter">
+			<div class="header">
+				ABC
+			</div>
+			<div class="checklist-container">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">Option 1</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" value="">Option 2</label>
+				</div>
+				<div class="checkbox disabled">
+					<label>
+						<input type="checkbox" value="" disabled>Option 3</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<template ngFor [ngForOf]="collection" [ngForTemplate]="itemTemplate"> </template>
+	</div>
+</div>
+<div class="flex padding-all" *ngIf="isTabularReport">
+	<table class="table table-bordered table-condensed">
+		<thead>
+			<tr>
+				<th *ngFor="let col of columns">
+					{{col.caption}}
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let row of collection">
+				<th *ngFor="let col of columns">
+					{{ row[col.propName] }}
+				</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
